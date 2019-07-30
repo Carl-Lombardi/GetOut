@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var queryURLUserEndDateSubmission;
   var queryURLUserEndDateConverted;
   var queryURLReturnVenue;
-  var queryUrlKey = "&token=QPGAVLFLTPMC2LQJRC3D";
+  var queryUrlKey = "&token=56NL2TKKYLOWEWCPKX2C";
 
   //Counter Variables Ensure Dynamically Created Divs all have different IDs 
   var counterDivs = 0;
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
       queryURLReturnVenue +
       queryUrlKey;
 
-    weatherQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + location + "&units=imperial&appid=583736142f8eecdee5b0aa5e37ffcd59";
+    weatherQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + location + "&units=imperial&appid=a21e75dd0163c2310385233b13d2134e";
 
     buttonHtml = "<div class = 'buttonCenter'><button class = 'btn red' data-id = 'buttonClearDiv' data-weatherqueryurl =" + weatherQueryURL + " data-queryurl =" + queryURLComplete + ">Clear Above Search</button><hr></div>";
 
@@ -212,15 +212,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  //Function places event date in incremented "AwesomeNewDiv'_'" created via runWeatherAJAX(). Uses server to bypass cors error.
+  //Function places event date in incremented "AwesomeNewDiv'_'" created via runWeatherAJAX().
   function runEventAJAX(divId, buttonHtml) {
     $.ajax({
-      url: "https://mighty-brook-95893.herokuapp.com/cors",
-      method: "POST",
-      data: {
-        url: queryURLComplete,
-        key: "efd92cf6cc5e7649916c4e73939e6281"
-      },
+      url: queryURLComplete,
+      method: "GET"
     }).then(function (response) {
       $("#AwesomeNewDiv" + divId).append('<h4>"Get Out!" to these Events during your trip</h4>');
       $("#AwesomeNewDiv" + divId).append("<ul class='collapsible' id = AwesomeNewEventDiv" + divId + ">");
