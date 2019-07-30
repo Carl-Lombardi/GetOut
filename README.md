@@ -1,4 +1,4 @@
-## Get Out- https://nicholas-schaefer.github.io/boneless-slippers/ (Site) https://github.com/nicholas-schaefer/boneless-slippers (Repo)
+## Get Out- https://carl-lombardi.github.io/GetOut/ (Site) https://github.com/Carl-Lombardi/GetOut (Repo)
 Our project is a new app which will be indispensable to the business traveler and the weekend getaway types alike. Have you ever traveled to a new city and wondered just what there is to do? This app combines the power of EventBrite and Open Weather into a user-friendly experience which allows a person to find the weather and a list of activities in any city in the United States with just a few clicks. 
 
 ## Why Get Out?
